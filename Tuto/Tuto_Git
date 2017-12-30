@@ -1,0 +1,7 @@
+Pour commencer, il faut installer git
+        Centos yum install git
+        Ubuntu apt-get install git
+        
+Ensuite pour recuperer le dossier, il faut faire un clone.
+        Sous Centos et ubuntu
+        git clone https://github.com/MrGunnery/Samba.git
