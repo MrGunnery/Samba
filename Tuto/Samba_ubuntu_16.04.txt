@@ -1,3 +1,5 @@
+A verifier
+
 Carte enp0s3 en bridge
 Carte interne enp0s8
 Nom du serveur 'srv'
@@ -5,7 +7,7 @@ Nom du domaine 'helha1'
 Nom du root 'user1'
 Nom du client windows 7 'client-PC'
 
--Testé sur Ubuntu 16.04 et Windows 10-
+-TestÃ© sur Ubuntu 16.04 et Windows 10-
 
 vi /etc/network/interfaces
 	auto enp0s8
@@ -136,16 +138,16 @@ chmod 777 home/docs
 
 CONNECT CLIENT WINDOWS 7
 search => regedit => HKEY_local_machine > system > currentControlSet > services > Lanman Workstation > Paramaters
-	créer DWord 32 bits 
+	crÃ©er DWord 32 bits 
 		DNSNameResolutionRequired > 0
-	créer DWord 32 bits
+	crÃ©er DWord 32 bits
 		DomainCompatibilityMode > 1
 
 changer domaine => helha1
-redémarrer
+redÃ©marrer
 connecter avec student1 (mdp : pass)
 
-dans Z:\ => créer start.bat => net use w: \\srv\docs
+dans Z:\ => crÃ©er start.bat => net use w: \\srv\docs
 
 DANS UBUNTU 
 mv /home/student1/start.bat /netlogon/
