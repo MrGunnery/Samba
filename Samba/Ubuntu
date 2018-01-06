@@ -29,7 +29,7 @@
     path = /profiles
     guest ok = no
     browseable = no
-    writeable = no
+    writeable = yes
     create mask = 0600
     directory mask = 0700
     
