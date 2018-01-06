@@ -1,0 +1,42 @@
+[global]
+    workgroup= Helha.lan
+    wins support= no
+    dns proxy = no
+    security = user
+    encrypt passwords = true
+    admin users = root
+    domain logons = yes
+    domain master = yes
+    logon home = \\%N\%U
+    logon path = \\%N\profiles\%U
+    logon script = logon.bat
+   
+[homes]
+    guest ok = no
+    browseable = no
+    writeable = yes
+    create mask = 0600
+    directory mask = 0700
+    valid users = %S
+    
+[netlogon]
+    path = /netlogon
+    write list = root
+    create mask = 0655
+    directory mask = 0755
+    
+[profiles]
+    path = /profiles
+    guest ok = no
+    browseable = no
+    writeable = no
+    create mask = 0600
+    directory mask = 0700
+    
+[profiles.V2]
+    copy = profiles
+    
+[public]
+    path = /home/public
+    writeable = yes
+    browseable = yes
