@@ -13,7 +13,8 @@
    
 [homes]
     guest ok = no
-    browseable = no
+    browseable = yes
+    read only = no
     writeable = yes
     create mask = 0600
     directory mask = 0700
@@ -24,6 +25,8 @@
     write list = root
     create mask = 0655
     directory mask = 0755
+    read only = yes
+    guest ok = yes
     
 [profiles]
     path = /profiles
@@ -40,3 +43,6 @@
     path = /home/public
     writeable = yes
     browseable = yes
+    read only = no
+    create mask = 0777
+    directory mask = 0777
