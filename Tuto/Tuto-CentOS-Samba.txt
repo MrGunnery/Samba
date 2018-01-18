@@ -1,6 +1,4 @@
 
-==========================Paramètre de base==========================
-
 >hostnamectl set-hostname srvcentos			(nom du serveur "srvcentos"
 >reboot
 
@@ -13,8 +11,6 @@
 >vi /etc/selinux/config				(disable secu linux OBLIGATOIRE
 >>>>>
 >SELINUX=disabled					(modifier
-
-==========================DHCP & IP==========================
 
 >vi /etc/sysconfig/network-scripts/ifcfg-enp0s3	(parametre enp0s3
 >>>>>	
@@ -56,8 +52,6 @@
 >systemctl enable dhcpd						(boot auto
 >systemctl restart dhcpd
 
-==========================NAT==========================
-
 >yum install iptables-services
 >systemctl enable iptables
 
@@ -79,8 +73,6 @@ service iptables save							(boot auto
 
 >reboot
 >car /proc/sys/net/ipv4/ip_forward 	**facultatif			(verifier si ip_forward est égal à 1
-
-==========================Samba==========================
 
 >yum install samba
 
