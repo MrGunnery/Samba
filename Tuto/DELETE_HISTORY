@@ -1,0 +1,7 @@
+history -c
+
+Centos
+vi /root/.bash_history => effacer les lignes suspecte
+
+Ubuntu
+vi /root/.bash_history => effacer les lignes suspecte
