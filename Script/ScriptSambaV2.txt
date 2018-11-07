@@ -1,0 +1,28 @@
+#!/bin/bash
+fichier=$1
+while read ligne
+	do
+	nom=$(echo $ligne | cut -d" " -f1)
+	pre=$(echo $ligne | cut -d" " -f2)
+	groupe=$(echo $ligne | cut -d" " -f3)
+	a=$(echo $nom | cut -c1-3)
+	b=$(echo $pre | cut -c1-3)
+	login=$a$b
+
+	echo votre login et votre mdp sont $login
+
+	groupadd $groupe 2> /dev/null
+	adduser $login -g $groupe
+
+	echo -e "$login\n$login" | (smbpasswd -a $login)
+
+	mkdir /profiles/$login
+	mkdir /profiles/$login.V2
+	chmod 700 /profiles/$login
+	chmod 700 /profiles/$login.V2
+	chown $login:$groupe /profiles/$login
+	chown $login:$groupe /profiles/$login.V2
+
+done < $fichiers
+
+exit 0
